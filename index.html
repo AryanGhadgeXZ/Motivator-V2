@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivator</title>
+    <style>
+        *{font-size: 50px; font-family: Arial, Helvetica, sans-serif;}
+        body{background-color: grey;}
+        input{background-color: rgb(85, 85, 85);color: orange;box-shadow: 0px 0px 50px;}
+        h2{color: orange;text-shadow: 2px 2px 2px black;}
+    </style>
+</head>
+<body>
+    <center>
+        <h1>The Motivator (btnless)</h1>
+        <h2 id="msg"></h2>
+        
+
+        <script>
+            function show(){
+                let msg = document.getElementById("msg");
+                let messages = ["M1","M2","M3","M4","M5","M6"];
+                let r =  parseInt(Math.random() * messages.length);
+                msg.innerHTML = r + " " + messages[r],1000;
+            }
+            show();
+            setInterval(show,1000);
+        </script>
+    </center>
+    
+</body>
+</html>
